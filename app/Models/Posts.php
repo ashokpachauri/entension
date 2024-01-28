@@ -29,7 +29,7 @@ class Posts extends Model
         'snippet_image',
         'snippet_content',
         'seo_title',
-        'seo_descriptions',
+        'seo_description',
         'seo_keywords',
         'seo_image',
         'tags',
