@@ -138,6 +138,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Mohamedsabil83\\FilamentFormsTinyeditor\\' => 39,
             'Mockery\\' => 8,
             'Masterminds\\' => 12,
         ),
@@ -468,6 +469,10 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Mohamedsabil83\\FilamentFormsTinyeditor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mohamedsabil83/filament-forms-tinyeditor/src',
+        ),
         'Mockery\\' => 
         array (
             0 => __DIR__ . '/..' . '/mockery/mockery/library/Mockery',
@@ -705,6 +710,11 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'AnourValar\\EloquentSerialize\\Service' => __DIR__ . '/..' . '/anourvalar/eloquent-serialize/src/Service.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Filament\\Resources\\PostsResource' => __DIR__ . '/../..' . '/app/Filament/Resources/PostsResource.php',
+        'App\\Filament\\Resources\\PostsResource\\Pages\\CreatePosts' => __DIR__ . '/../..' . '/app/Filament/Resources/PostsResource/Pages/CreatePosts.php',
+        'App\\Filament\\Resources\\PostsResource\\Pages\\EditPosts' => __DIR__ . '/../..' . '/app/Filament/Resources/PostsResource/Pages/EditPosts.php',
+        'App\\Filament\\Resources\\PostsResource\\Pages\\ListPosts' => __DIR__ . '/../..' . '/app/Filament/Resources/PostsResource/Pages/ListPosts.php',
+        'App\\Filament\\Resources\\PostsResource\\Pages\\ViewPosts' => __DIR__ . '/../..' . '/app/Filament/Resources/PostsResource/Pages/ViewPosts.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -716,11 +726,15 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\Comments' => __DIR__ . '/../..' . '/app/Models/Comments.php',
+        'App\\Models\\Posts' => __DIR__ . '/../..' . '/app/Models/Posts.php',
+        'App\\Models\\Ratings' => __DIR__ . '/../..' . '/app/Models/Ratings.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
+        'App\\Providers\\Filament\\AuthorPanelProvider' => __DIR__ . '/../..' . '/app/Providers/Filament/AuthorPanelProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'BladeUI\\Heroicons\\BladeHeroiconsServiceProvider' => __DIR__ . '/..' . '/blade-ui-kit/blade-heroicons/src/BladeHeroiconsServiceProvider.php',
@@ -5147,6 +5161,8 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'Mockery\\Undefined' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Undefined.php',
         'Mockery\\VerificationDirector' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/VerificationDirector.php',
         'Mockery\\VerificationExpectation' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/VerificationExpectation.php',
+        'Mohamedsabil83\\FilamentFormsTinyeditor\\Components\\TinyEditor' => __DIR__ . '/..' . '/mohamedsabil83/filament-forms-tinyeditor/src/Components/TinyEditor.php',
+        'Mohamedsabil83\\FilamentFormsTinyeditor\\FilamentFormsTinyeditorServiceProvider' => __DIR__ . '/..' . '/mohamedsabil83/filament-forms-tinyeditor/src/FilamentFormsTinyeditorServiceProvider.php',
         'Monolog\\Attribute\\AsMonologProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Attribute/AsMonologProcessor.php',
         'Monolog\\Attribute\\WithMonologChannel' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Attribute/WithMonologChannel.php',
         'Monolog\\DateTimeImmutable' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/DateTimeImmutable.php',

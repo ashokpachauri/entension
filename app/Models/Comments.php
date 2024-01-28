@@ -1,28 +1,26 @@
 <?php
-
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Posts;
-
-class User extends Authenticatable
+use App\Models\User;
+use Illuminate\Database\Eloquent\Model;
+class Comments extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable,SoftDeletes;
+    use  HasFactory, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
+    protected $table ='post_comments';
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'user_id',
+        'post_id',
+        'content',
     ];
 
     /**
@@ -30,10 +28,10 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    // protected $hidden = [
+    //     'user_id',
+    //     'remember_token',
+    // ];
 
     /**
      * The attributes that should be cast.
@@ -41,10 +39,14 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
     ];
-    public function posts(){
-        $this->hasMany(Posts::class,'user_id','id');
+    public function user(){
+        $this->belongsTo(User::class,'user_id','id');
+    }
+    public function post(){
+        $this->belongsTo(Posts::class,'post_id','id');
     }
 }
