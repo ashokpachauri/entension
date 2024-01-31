@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Posts;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
-class Categories extends Model
+class Catagories extends Model
 {
     use  HasFactory, SoftDeletes;
 
@@ -20,6 +20,7 @@ class Categories extends Model
     protected $fillable = [
         'title',
         'slug',
+        'image',
     ];
 
     /**
@@ -43,6 +44,6 @@ class Categories extends Model
         'deleted_at' => 'datetime',
     ];
     public function posts(){
-        $this->hasMany(Posts::class,'category_id','id');
+        $this->hasMany(Posts::class,'catagory_id','id');
     }
 }

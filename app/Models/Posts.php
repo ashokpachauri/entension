@@ -9,6 +9,7 @@ use App\Models\Categories;
 use App\Models\Ratings;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 class Posts extends Model
 {
     use  HasFactory, SoftDeletes;
@@ -18,10 +19,14 @@ class Posts extends Model
      *
      * @var array<int, string>
      */
+    protected static function booted(): void
+    {
+        
+    }
     protected $table ='posts';
     protected $fillable = [
         'user_id',
-        'category_id',
+        'catagory_id',
         'title',
         'content',
         'snippet_content',
@@ -57,15 +62,15 @@ class Posts extends Model
         'deleted_at' => 'datetime',
     ];
     public function user(){
-        $this->belongsTo(User::class,'user_id','id');
+        return $this->belongsTo(User::class,'user_id','id');
     }
-    public function category(){
-        $this->belongsTo(Categories::class,'category_id','id');
+    public function catagories(){
+        return $this->belongsTo(Catagories::class,'catagory_id','id');
     }
     public function comments(){
-        $this->hasMany(Comments::class,'post_id','id');
+        return $this->hasMany(Comments::class,'posts_id','id');
     }
     public function ratings(){
-        $this->hasMany(Ratings::class,'post_id','id');
+        return $this->hasMany(Ratings::class,'posts_id','id');
     }
 }

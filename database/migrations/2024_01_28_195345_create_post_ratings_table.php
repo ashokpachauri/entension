@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('post_ratings', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
-            $table->string('post_id');
+            $table->string('posts_id');
             $table->string('rating');
             $table->longText('content');
             $table->timestamps();

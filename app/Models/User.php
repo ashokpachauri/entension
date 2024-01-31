@@ -9,6 +9,8 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Posts;
+use App\Models\Ratings;
+use App\Models\Comments;
 
 class User extends Authenticatable
 {
@@ -23,6 +25,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'username',
+        'mobile',
     ];
 
     /**
@@ -33,6 +37,7 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'email_verified_at',
     ];
 
     /**
@@ -46,5 +51,11 @@ class User extends Authenticatable
     ];
     public function posts(){
         $this->hasMany(Posts::class,'user_id','id');
+    }
+    public function ratings(){
+        $this->hasMany(Ratings::class,'user_id','id');
+    }
+    public function comments(){
+        $this->hasMany(Comments::class,'user_id','id');
     }
 }

@@ -19,7 +19,7 @@ class Ratings extends Model
     protected $table ='post_ratings';
     protected $fillable = [
         'user_id',
-        'post_id',
+        'posts_id',
         'content',
         'rating',
     ];
@@ -47,7 +47,7 @@ class Ratings extends Model
     public function user(){
         $this->belongsTo(User::class,'user_id','id');
     }
-    public function post(){
-        $this->belongsTo(Posts::class,'post_id','id');
+    public function posts(){
+        $this->belongsTo(Posts::class,'posts_id','id');
     }
 }

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
-            $table->string('category_id');
+            $table->string('catagory_id');
             $table->string('title');
             $table->string('seo_title')->nullable();
             $table->longText('seo_description')->nullable();
@@ -25,6 +25,7 @@ return new class extends Migration
             $table->longText('content');
             $table->longText('snippet_content');
             $table->string('tags')->nullable();
+            $table->string('note')->nullable();
             $table->string('slug')->unique();
             $table->timestamps();
             $table->softDeletes();
